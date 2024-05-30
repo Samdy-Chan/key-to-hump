@@ -1,0 +1,38 @@
+{
+  "name": "@samdy-chan/key-to-hump",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Convert all key names of object or all key names of all the objects in the array from underline format to camel hump format.\n Or convert its from camel hump format to underline format.\nSupport running in JavaScript or TypeScript in the commonJS or es6 module environments.",
+  "main": "dist/index.es.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript --bundleConfigAsCjs"
+  },
+  "exports":{
+    ".":{
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Samdy-Chan/key-to-hump"
+  },
+  "keywords": [
+    "hump",
+    "underline",
+    "key to hump",
+    "key to underline"
+  ],
+  "author": "Samdy_Chan",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.12.12",
+    "rollup": "^4.18.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  }
+}
